@@ -1,0 +1,2 @@
+osource "d:/software/ncs/v2.3.0/nrf/samples/bluetooth/peripheral_uart/boards/shields/*/Kconfig.shield"
+osource "D:/Software/ncs/v2.3.0/nrf/boards/shields/*/Kconfig.shield"
