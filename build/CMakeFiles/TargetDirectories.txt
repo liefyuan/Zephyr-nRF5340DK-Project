@@ -82,8 +82,8 @@ F:/nRF5340-DK-Project/SecondProject/build/zephyr/soc/arm/nordic_nrf/common/CMake
 F:/nRF5340-DK-Project/SecondProject/build/zephyr/soc/arm/nordic_nrf/common/CMakeFiles/rebuild_cache.dir
 F:/nRF5340-DK-Project/SecondProject/build/zephyr/boards/CMakeFiles/edit_cache.dir
 F:/nRF5340-DK-Project/SecondProject/build/zephyr/boards/CMakeFiles/rebuild_cache.dir
-F:/nRF5340-DK-Project/SecondProject/build/zephyr/boards/arm/nrf5340dk_nrf5340/CMakeFiles/edit_cache.dir
-F:/nRF5340-DK-Project/SecondProject/build/zephyr/boards/arm/nrf5340dk_nrf5340/CMakeFiles/rebuild_cache.dir
+F:/nRF5340-DK-Project/SecondProject/build/zephyr/boards/boards/arm/nrf5340dk_nrf5340_cpuapp/CMakeFiles/edit_cache.dir
+F:/nRF5340-DK-Project/SecondProject/build/zephyr/boards/boards/arm/nrf5340dk_nrf5340_cpuapp/CMakeFiles/rebuild_cache.dir
 F:/nRF5340-DK-Project/SecondProject/build/zephyr/subsys/CMakeFiles/edit_cache.dir
 F:/nRF5340-DK-Project/SecondProject/build/zephyr/subsys/CMakeFiles/rebuild_cache.dir
 F:/nRF5340-DK-Project/SecondProject/build/zephyr/subsys/debug/CMakeFiles/edit_cache.dir
@@ -168,6 +168,9 @@ F:/nRF5340-DK-Project/SecondProject/build/modules/nrf/lib/CMakeFiles/edit_cache.
 F:/nRF5340-DK-Project/SecondProject/build/modules/nrf/lib/CMakeFiles/rebuild_cache.dir
 F:/nRF5340-DK-Project/SecondProject/build/modules/nrf/lib/bin/CMakeFiles/edit_cache.dir
 F:/nRF5340-DK-Project/SecondProject/build/modules/nrf/lib/bin/CMakeFiles/rebuild_cache.dir
+F:/nRF5340-DK-Project/SecondProject/build/modules/nrf/lib/dk_buttons_and_leds/CMakeFiles/..__nrf__lib__dk_buttons_and_leds.dir
+F:/nRF5340-DK-Project/SecondProject/build/modules/nrf/lib/dk_buttons_and_leds/CMakeFiles/edit_cache.dir
+F:/nRF5340-DK-Project/SecondProject/build/modules/nrf/lib/dk_buttons_and_leds/CMakeFiles/rebuild_cache.dir
 F:/nRF5340-DK-Project/SecondProject/build/modules/nrf/lib/flash_patch/CMakeFiles/edit_cache.dir
 F:/nRF5340-DK-Project/SecondProject/build/modules/nrf/lib/flash_patch/CMakeFiles/rebuild_cache.dir
 F:/nRF5340-DK-Project/SecondProject/build/modules/nrf/lib/fatal_error/CMakeFiles/..__nrf__lib__fatal_error.dir
