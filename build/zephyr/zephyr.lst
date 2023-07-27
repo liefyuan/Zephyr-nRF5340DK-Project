@@ -513,7 +513,7 @@ Disassembly of section text:
 #define GetBit(x, y)   (x &= (1<<y))      // 特定位取值
 #define ReveBit(x, y)  (x ^= (1<<y))      // 特定位取反
 
-void button_changed(uint32_t button_state, uint32_t has_changed)
+static void button_changed(uint32_t button_state, uint32_t has_changed)
 {
      424:	b510      	push	{r4, lr}
 	uint32_t buttons = button_state & has_changed;
@@ -669,18 +669,18 @@ void button_changed(uint32_t button_state, uint32_t has_changed)
      528:	00007760 	.word	0x00007760
      52c:	00007774 	.word	0x00007774
 
-00000530 <configure_gpio>:
+00000530 <led_key_gpio_init>:
 
-static void configure_gpio(void)
+void led_key_gpio_init(void)
 {
      530:	b508      	push	{r3, lr}
 	int err;
 
 	err = dk_buttons_init(button_changed);
-     532:	4809      	ldr	r0, [pc, #36]	; (558 <configure_gpio+0x28>)
+     532:	4809      	ldr	r0, [pc, #36]	; (558 <led_key_gpio_init+0x28>)
      534:	f002 fc6c 	bl	2e10 <dk_buttons_init>
 	if (err) {
-     538:	b920      	cbnz	r0, 544 <configure_gpio+0x14>
+     538:	b920      	cbnz	r0, 544 <led_key_gpio_init+0x14>
 		printk("Cannot init buttons (err: %d)", err);
 	}
 
@@ -688,21 +688,21 @@ static void configure_gpio(void)
      53a:	f002 fd13 	bl	2f64 <dk_leds_init>
 	if (err) {
      53e:	4601      	mov	r1, r0
-     540:	b928      	cbnz	r0, 54e <configure_gpio+0x1e>
+     540:	b928      	cbnz	r0, 54e <led_key_gpio_init+0x1e>
 		printk("Cannot init LEDs (err: %d)", err);
 	}
 }
      542:	bd08      	pop	{r3, pc}
      544:	4601      	mov	r1, r0
 		printk("Cannot init buttons (err: %d)", err);
-     546:	4805      	ldr	r0, [pc, #20]	; (55c <configure_gpio+0x2c>)
+     546:	4805      	ldr	r0, [pc, #20]	; (55c <led_key_gpio_init+0x2c>)
      548:	f004 ff27 	bl	539a <printk>
-     54c:	e7f5      	b.n	53a <configure_gpio+0xa>
+     54c:	e7f5      	b.n	53a <led_key_gpio_init+0xa>
 		printk("Cannot init LEDs (err: %d)", err);
-     54e:	4804      	ldr	r0, [pc, #16]	; (560 <configure_gpio+0x30>)
+     54e:	4804      	ldr	r0, [pc, #16]	; (560 <led_key_gpio_init+0x30>)
      550:	f004 ff23 	bl	539a <printk>
 }
-     554:	e7f5      	b.n	542 <configure_gpio+0x12>
+     554:	e7f5      	b.n	542 <led_key_gpio_init+0x12>
      556:	bf00      	nop
      558:	00000425 	.word	0x00000425
      55c:	00007788 	.word	0x00007788
@@ -14258,12 +14258,15 @@ static int k_sys_work_q_init(const struct device *dev)
     5380:	20000af4 	.word	0x20000af4
 
 00005384 <main>:
+#include <zephyr/kernel.h>
+
+#include "led_key_logic.h"
 
 void main(void)
 {
     5384:	b508      	push	{r3, lr}
-    configure_gpio();
-    5386:	f7fb f8d3 	bl	530 <configure_gpio>
+    led_key_gpio_init();
+    5386:	f7fb f8d3 	bl	530 <led_key_gpio_init>
 	return z_impl_k_sleep(timeout);
     538a:	f44f 4000 	mov.w	r0, #32768	; 0x8000
     538e:	2100      	movs	r1, #0
