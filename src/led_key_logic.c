@@ -84,4 +84,6 @@ void led_key_gpio_init(void)
 	if (err) {
 		printk("Cannot init LEDs (err: %d)", err);
 	}
+
+    printk("leds keys init ok!\r\n");
 }

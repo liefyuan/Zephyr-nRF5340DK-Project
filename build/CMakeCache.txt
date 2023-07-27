@@ -27,7 +27,7 @@ BOARD:STRING=nrf5340dk_nrf5340_cpuapp
 BOARD_DIR:PATH=D:/Software/ncs/v2.3.0/zephyr/boards/arm/nrf5340dk_nrf5340
 
 //No help, variable specified on the command line.
-BOARD_ROOT:STRING=d:/software/ncs/v2.3.0/nrf/samples/bluetooth/peripheral_uart
+BOARD_ROOT:STRING=f:/nrf5340-dk-project/secondproject;d:/software/ncs/v2.3.0/nrf/samples/bluetooth/peripheral_uart
 
 //Path to a program.
 BOSSAC:FILEPATH=BOSSAC-NOTFOUND
@@ -301,7 +301,7 @@ DTC:FILEPATH=D:/Software/ncs/toolchains/v2.3.0/opt/bin/dtc.exe
 // parameter. These settings will override the settings in the
 // board's .dts file. Multiple files may be listed, e.g. DTC_OVERLAY_FILE="dts1.overlay
 // dts2.overlay"
-DTC_OVERLAY_FILE:STRING=
+DTC_OVERLAY_FILE:STRING=F:/nRF5340-DK-Project/SecondProject/nrf5340dk_nrf5340_cpuapp.overlay
 
 //Path to a program.
 GPERF:FILEPATH=D:/Software/ncs/toolchains/v2.3.0/opt/bin/gperf.exe
@@ -555,6 +555,4 @@ _Python3_EXECUTABLE:INTERNAL=D:/Software/ncs/toolchains/v2.3.0/opt/bin/python.ex
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;8;2;64;;cp38-win_amd64.pyd;D:\Software\ncs\toolchains\v2.3.0\opt\bin\Lib;D:\Software\ncs\toolchains\v2.3.0\opt\bin\Lib;D:\Software\ncs\toolchains\v2.3.0\opt\bin\Lib\site-packages;D:\Software\ncs\toolchains\v2.3.0\opt\bin\Lib\site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=c032e598bed3b132ede069d8a39a0a6a
-//Test check_fmacro_prefix_map_F__nRF5340_DK_Project_SecondProject_CMAKE_SOURCE_DIR_C__nostartfiles__nostdlib__isystem__d__software_ncs_toolchains_v2_3_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__d__software_ncs_toolchains_v2_3_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0
-check_fmacro_prefix_map_F__nRF5340_DK_Project_SecondProject_CMAKE_SOURCE_DIR_C__nostartfiles__nostdlib__isystem__d__software_ncs_toolchains_v2_3_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__d__software_ncs_toolchains_v2_3_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0:INTERNAL=1
 

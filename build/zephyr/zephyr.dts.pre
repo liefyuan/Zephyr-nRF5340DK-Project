@@ -1277,4 +1277,17 @@ zephyr_udc0: &usbd {
  };
 };
 # 0 "<command-line>" 2
+# 1 "F:/nRF5340-DK-Project/SecondProject/nrf5340dk_nrf5340_cpuapp.overlay" 1
+# 13 "F:/nRF5340-DK-Project/SecondProject/nrf5340dk_nrf5340_cpuapp.overlay"
+/ {
+ chosen {
+  nordic,liefyuan-uart = &uart1;
+ };
+};
+
+&uart1 {
+ status = "okay";
+ current-speed = <115200>;
+};
+# 0 "<command-line>" 2
 # 1 "D:/Software/ncs/v2.3.0/zephyr/misc/empty_file.c"

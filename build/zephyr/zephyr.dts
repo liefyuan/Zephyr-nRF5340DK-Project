@@ -22,6 +22,7 @@
 		zephyr,code-partition = &slot0_partition;
 		zephyr,sram-secure-partition = &sram0_s;
 		zephyr,sram-non-secure-partition = &sram0_ns;
+		nordic,liefyuan-uart = &uart1;
 	};
 	aliases {
 		led0 = &led0;
@@ -167,7 +168,7 @@
 				compatible = "nordic,nrf-uarte";
 				reg = < 0x9000 0x1000 >;
 				interrupts = < 0x9 0x1 >;
-				status = "disabled";
+				status = "okay";
 				current-speed = < 0x1c200 >;
 				pinctrl-0 = < &uart1_default >;
 				pinctrl-1 = < &uart1_sleep >;
